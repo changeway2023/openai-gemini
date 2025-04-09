@@ -146,6 +146,9 @@ async function handleCompletions (req, apiKey) {
     case req.model.startsWith("models/"):
       model = req.model.substring(7);
       break;
+    case req.model.startsWith("tunedModels/"):
+      model = req.model;
+      break;
     case req.model.startsWith("gemini-"):
     case req.model.startsWith("gemma-"):
     case req.model.startsWith("learnlm-"):
